@@ -272,7 +272,7 @@ params = {
     'isPromoApplied': 'true',
 }
 
-response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies, headers=headers).json()
+response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies, headers=headers, allow_redirects=False).json()
 
 product_prices = response.get('body').get('materialPrices')
 for prices in product_prices:
